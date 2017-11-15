@@ -15,6 +15,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7BE54E929589CFA41975E945 /* Pods_FormEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6887FF4A64C436F1CB0C8DF /* Pods_FormEditor_Tests.framework */; };
+		B01BDB731FB0449C007BBA5C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01BDB721FB0449C007BBA5C /* CustomCell.swift */; };
+		B0E49D241FB1FDEB00DB3EF0 /* CustomCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */; };
 		BBC57D754371E6A62C805295 /* Pods_FormEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DEAA299EF9B28641BDE538 /* Pods_FormEditor_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		72E5ACAE7BB3B2CCBA408100 /* Pods-FormEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Example/Pods-FormEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBE41DD96F5A761786CF1F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B01BDB721FB0449C007BBA5C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell2.swift; sourceTree = "<group>"; };
 		B23BDA6CF90BDA4E5FCFDD26 /* Pods-FormEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Tests/Pods-FormEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BF3DEA9CAEA85CAEA990091D /* Pods-FormEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Tests/Pods-FormEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6887FF4A64C436F1CB0C8DF /* Pods_FormEditor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormEditor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,8 @@
 				402044051F8F6D8C0003CA71 /* FormEditorViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				B01BDB721FB0449C007BBA5C /* CustomCell.swift */,
+				B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -375,7 +381,9 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				402044061F8F6D8C0003CA71 /* FormEditorViewController.swift in Sources */,
+				B01BDB731FB0449C007BBA5C /* CustomCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B0E49D241FB1FDEB00DB3EF0 /* CustomCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,10 @@ class FormEditorViewController: FEViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        preferences.colors.inputAccessory.background = UIColor.white
+        preferences.colors.inputAccessory.background = view.backgroundColor!
         preferences.colors.inputAccessory.done = UIColor.red
-        preferences.colors.inputAccessory.navigation = UIColor.red
+        preferences.colors.inputAccessory.navigation = view.backgroundColor!
         preferences.colors.text.editing = UIColor.red
+        preferences.colors.text.normal = UIColor.orange
     }
 }
