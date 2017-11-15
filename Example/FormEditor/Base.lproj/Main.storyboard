@@ -101,6 +101,40 @@
                                     <outlet property="titleTextLabel" destination="Xh8-Cg-euF" id="lG2-qC-7iv"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomSelectorCell" id="FvB-Zw-KIi" userLabel="CustomSelectorCell" customClass="SelectorCell" customModule="FormEditor_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FvB-Zw-KIi" id="I7S-l0-4Wd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Selector Cell " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-ac-W0a">
+                                            <rect key="frame" x="14" y="11" width="166" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prV-uL-oWg">
+                                            <rect key="frame" x="229" y="7" width="77" height="30"/>
+                                            <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="prV-uL-oWg" firstAttribute="top" secondItem="I7S-l0-4Wd" secondAttribute="top" constant="7" id="4iQ-st-KR9"/>
+                                        <constraint firstItem="Ybg-ac-W0a" firstAttribute="leading" secondItem="I7S-l0-4Wd" secondAttribute="leading" constant="14" id="XQF-6U-FMm"/>
+                                        <constraint firstAttribute="bottom" secondItem="prV-uL-oWg" secondAttribute="bottom" constant="6.5" id="ojh-VN-uwh"/>
+                                        <constraint firstAttribute="trailing" secondItem="prV-uL-oWg" secondAttribute="trailing" constant="14" id="oyf-4j-tn9"/>
+                                        <constraint firstItem="Ybg-ac-W0a" firstAttribute="top" secondItem="I7S-l0-4Wd" secondAttribute="top" constant="11" id="rWB-kR-0MN"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ybg-ac-W0a" secondAttribute="bottom" constant="11.5" id="vF5-U1-UXf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleTextLabel" destination="Ybg-ac-W0a" id="oIT-Jd-IPh"/>
+                                    <outlet property="valueTextField" destination="prV-uL-oWg" id="cba-97-h5F"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="JiL-l3-Peh" id="sxk-4L-dHM"/>

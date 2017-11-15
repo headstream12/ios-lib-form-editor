@@ -4,7 +4,7 @@ public class FESelector: PFEParam {
     public var id: String
     public var cellNibName = "FESelector"
     public var cellReuseId = "FESelector"
-    public var allowReuseCell = false
+    public var allowReuseCell = true
     
     public var accessibilityIdentifier: String?
     public var title: String?
@@ -16,17 +16,21 @@ public class FESelector: PFEParam {
     public var visible: Bool = true
     
     public var valueChangeListener: ((String?) -> Void)?
+    public var configureCell: ((UITableViewCell) -> Void)?
     
-    public init(id: String, title: String? = nil, value: String? = nil, emptyVisibleValue: String?, displayableValueFormat: String = "%@",readOnly: Bool = false, visible: Bool = true, accessibilityIdentifier: String? = nil, listener: ((String?) -> Void)? = nil, items: () -> [(value:String?, visibleValue:String?)]?) {
+    public init(id: String, reuseId: String = "FESelector", nibName: String = "FESelector", title: String? = nil, value: String? = nil, emptyVisibleValue: String?, displayableValueFormat: String = "%@",readOnly: Bool = false, visible: Bool = true, accessibilityIdentifier: String? = nil, listener: ((String?) -> Void)? = nil, items: () -> [(value:String?, visibleValue:String?)]?, configureCell: ((UITableViewCell) -> Void)? = nil) {
         self.id = id
         self.title = title
         self.value = value
+        self.cellReuseId = reuseId
+        self.cellNibName = nibName
         self.emptyVisibleValue = emptyVisibleValue
         self.displayableValueFormat = displayableValueFormat
         self.readOnly = readOnly
         self.visible = visible
         self.accessibilityIdentifier = accessibilityIdentifier
         self.valueChangeListener = listener
+        self.configureCell = configureCell
         
         if var items = items(), items.count > 0 {
             items.insert((nil, emptyVisibleValue), at: 0)
@@ -37,6 +41,7 @@ public class FESelector: PFEParam {
     public func configure(cell: UITableViewCell, facade: FormParamFacade) {
         if let paramCell = cell as? FESelectorCell {
             paramCell.configure(facade: facade)
+            configureCell?(cell)
         }
     }
     

@@ -16,6 +16,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7BE54E929589CFA41975E945 /* Pods_FormEditor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6887FF4A64C436F1CB0C8DF /* Pods_FormEditor_Tests.framework */; };
 		B01BDB731FB0449C007BBA5C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01BDB721FB0449C007BBA5C /* CustomCell.swift */; };
+		B0B218E01FBCA35F00BB66C4 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B218DF1FBCA35F00BB66C4 /* SelectorCell.swift */; };
 		B0E49D241FB1FDEB00DB3EF0 /* CustomCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */; };
 		BBC57D754371E6A62C805295 /* Pods_FormEditor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DEAA299EF9B28641BDE538 /* Pods_FormEditor_Example.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		72E5ACAE7BB3B2CCBA408100 /* Pods-FormEditor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Example/Pods-FormEditor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8CBE41DD96F5A761786CF1F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B01BDB721FB0449C007BBA5C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B0B218DF1FBCA35F00BB66C4 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
 		B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell2.swift; sourceTree = "<group>"; };
 		B23BDA6CF90BDA4E5FCFDD26 /* Pods-FormEditor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Tests/Pods-FormEditor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BF3DEA9CAEA85CAEA990091D /* Pods-FormEditor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormEditor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormEditor_Tests/Pods-FormEditor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				B01BDB721FB0449C007BBA5C /* CustomCell.swift */,
 				B0E49D231FB1FDEB00DB3EF0 /* CustomCell2.swift */,
+				B0B218DF1FBCA35F00BB66C4 /* SelectorCell.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -224,10 +227,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YJ7WEU84RH;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YJ7WEU84RH;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -383,6 +388,7 @@
 				402044061F8F6D8C0003CA71 /* FormEditorViewController.swift in Sources */,
 				B01BDB731FB0449C007BBA5C /* CustomCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				B0B218E01FBCA35F00BB66C4 /* SelectorCell.swift in Sources */,
 				B0E49D241FB1FDEB00DB3EF0 /* CustomCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +523,7 @@
 			baseConfigurationReference = 72E5ACAE7BB3B2CCBA408100 /* Pods-FormEditor_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YJ7WEU84RH;
 				INFOPLIST_FILE = FormEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -531,6 +538,7 @@
 			baseConfigurationReference = 503AB379F6159128D18B2393 /* Pods-FormEditor_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YJ7WEU84RH;
 				INFOPLIST_FILE = FormEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -544,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF3DEA9CAEA85CAEA990091D /* Pods-FormEditor_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YJ7WEU84RH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -564,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B23BDA6CF90BDA4E5FCFDD26 /* Pods-FormEditor_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YJ7WEU84RH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

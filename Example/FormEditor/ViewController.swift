@@ -21,6 +21,12 @@ class ViewController: FormEditorViewController, PFEForm {
     
     var selector1: String?
     var selector2: String?
+    
+    var years: [(value:String?, visibleValue:String?)]? = [
+        ("2001", "2001"),
+        ("2002", "2002")
+    ]
+    
     let selectorValues: [(String?, String?)] = [("1","Раз"),("2","Два"),("3","Три")]
     
     
@@ -53,6 +59,11 @@ class ViewController: FormEditorViewController, PFEForm {
             let customCell2 = $0 as! CustomCell2
             customCell2.titleTextLabel.text = "Год рождения"
         })
+        
+        section1 += FESelector(id: "Selector1", reuseId: "CustomSelectorCell", emptyVisibleValue: "Не выбрано", listener: {self.value1 = $0}, items: { [unowned self] in self.years}, configureCell: {
+                let selectorCell = $0 as! SelectorCell
+                selectorCell.titleTextLabel.text = "Год выпуска"
+            })
 
 //        section1 += FESelector(id: "sel_1", title: "Выбор 1", value: selector1, readOnly: false, listener: {self.selector1 = $0; self.refresh()}, items: {self.selectorValues})
         
