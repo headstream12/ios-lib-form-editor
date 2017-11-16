@@ -1,5 +1,5 @@
 //
-//  CustomCell2.swift
+//  CustomDateCell.swift
 //  FormEditor_Example
 //
 //  Created by Ilya Glazunov on 07/11/2017.
@@ -9,7 +9,7 @@
 import UIKit
 import FormEditor
 
-class CustomCell2: FEDateCell {
+class CustomDateCell: FEDateCell {
 
     @IBOutlet weak var titleTextLabel: UILabel!
     

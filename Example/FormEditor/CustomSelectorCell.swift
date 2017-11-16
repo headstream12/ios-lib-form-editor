@@ -1,5 +1,5 @@
 //
-//  SelectorCell.swift
+//  CustomSelectorCell
 //  FormEditor_Example
 //
 //  Created by Ilya Glazunov on 15/11/2017.
@@ -8,7 +8,7 @@
 
 import FormEditor
 
-class SelectorCell: FESelectorCell {
+class CustomSelectorCell: FESelectorCell {
 
     @IBOutlet weak var titleTextLabel: UILabel!
     

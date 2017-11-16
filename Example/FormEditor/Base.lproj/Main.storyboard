@@ -18,70 +18,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" id="XhN-5l-X8B" customClass="CustomCell" customModule="FormEditor_Example" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell2" id="xwc-lg-uv3" customClass="CustomDateCell" customModule="FormEditor_Example" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XhN-5l-X8B" id="69e-1g-Rf6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLy-H7-94E">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLF-hW-vEK">
-                                            <rect key="frame" x="14" y="12" width="91" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l4-no-Boa">
-                                            <rect key="frame" x="178" y="12" width="128" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="128" id="k7b-1z-U2N"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="qLF-hW-vEK" firstAttribute="top" secondItem="69e-1g-Rf6" secondAttribute="top" constant="12" id="5pB-2R-LSW"/>
-                                        <constraint firstAttribute="bottom" secondItem="rLy-H7-94E" secondAttribute="bottom" id="5tD-Vq-pXu"/>
-                                        <constraint firstItem="qLF-hW-vEK" firstAttribute="centerY" secondItem="69e-1g-Rf6" secondAttribute="centerY" id="66p-iQ-68A"/>
-                                        <constraint firstItem="rLy-H7-94E" firstAttribute="leading" secondItem="69e-1g-Rf6" secondAttribute="leading" id="QGT-Rh-VKw"/>
-                                        <constraint firstAttribute="trailing" secondItem="8l4-no-Boa" secondAttribute="trailing" constant="14" id="XTe-OW-YYw"/>
-                                        <constraint firstAttribute="bottom" secondItem="qLF-hW-vEK" secondAttribute="bottom" constant="10.5" id="eqh-vJ-1Z1"/>
-                                        <constraint firstItem="rLy-H7-94E" firstAttribute="top" secondItem="69e-1g-Rf6" secondAttribute="top" id="f0d-Yv-fPc"/>
-                                        <constraint firstAttribute="trailing" secondItem="rLy-H7-94E" secondAttribute="trailing" id="l1v-oQ-V6K"/>
-                                        <constraint firstItem="8l4-no-Boa" firstAttribute="top" secondItem="69e-1g-Rf6" secondAttribute="top" constant="12" id="ui8-Eb-7LJ"/>
-                                        <constraint firstItem="qLF-hW-vEK" firstAttribute="leading" secondItem="69e-1g-Rf6" secondAttribute="leading" constant="14" id="uof-Oo-jm7"/>
-                                        <constraint firstAttribute="bottom" secondItem="8l4-no-Boa" secondAttribute="bottom" constant="10.5" id="yl7-Ld-hGv"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateTextField" destination="rLy-H7-94E" id="YUH-Rc-1Ha"/>
-                                    <outlet property="titleLabel" destination="qLF-hW-vEK" id="kHB-5D-Zbd"/>
-                                    <outlet property="valueLabel" destination="8l4-no-Boa" id="GXs-8L-jkM"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell2" id="xwc-lg-uv3" customClass="CustomCell2" customModule="FormEditor_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xwc-lg-uv3" id="Hq8-7f-gKi">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom cell 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh8-Cg-euF">
-                                            <rect key="frame" x="14" y="11" width="104.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Date Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh8-Cg-euF">
+                                            <rect key="frame" x="14" y="11" width="134" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-Li-Fm9">
-                                            <rect key="frame" x="240" y="7" width="66" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="info" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-Li-Fm9">
+                                            <rect key="frame" x="277" y="7" width="29" height="30"/>
                                             <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -98,11 +49,11 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateTextField" destination="6HM-Li-Fm9" id="hxQ-6K-ljk"/>
-                                    <outlet property="titleTextLabel" destination="Xh8-Cg-euF" id="lG2-qC-7iv"/>
+                                    <outlet property="titleTextLabel" destination="Xh8-Cg-euF" id="Bsy-EK-c1i"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomSelectorCell" id="FvB-Zw-KIi" userLabel="CustomSelectorCell" customClass="SelectorCell" customModule="FormEditor_Example" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomSelectorCell" id="FvB-Zw-KIi" userLabel="CustomSelectorCell" customClass="CustomSelectorCell" customModule="FormEditor_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FvB-Zw-KIi" id="I7S-l0-4Wd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -114,8 +65,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text Field" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prV-uL-oWg">
-                                            <rect key="frame" x="229" y="7" width="77" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="info" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prV-uL-oWg">
+                                            <rect key="frame" x="273" y="7" width="33" height="30"/>
                                             <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -131,7 +82,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="titleTextLabel" destination="Ybg-ac-W0a" id="oIT-Jd-IPh"/>
+                                    <outlet property="titleTextLabel" destination="Ybg-ac-W0a" id="thh-5I-0NL"/>
                                     <outlet property="valueTextField" destination="prV-uL-oWg" id="cba-97-h5F"/>
                                 </connections>
                             </tableViewCell>
