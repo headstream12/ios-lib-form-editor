@@ -27,6 +27,8 @@ class ViewController: FormEditorViewController, PFEForm {
         ("2002", "2002")
     ]
     
+    var textAreaText: String?
+    
     let selectorValues: [(String?, String?)] = [("1","Раз"),("2","Два"),("3","Три")]
     
     
@@ -50,6 +52,8 @@ class ViewController: FormEditorViewController, PFEForm {
                 let selectorCell = $0 as! CustomSelectorCell
                 selectorCell.titleTextLabel.text = "Год выпуска"
             })
+        
+        section1 += FETextArea(id: "TextArea", title: "Тайтл", value: "Текст", listener: {self.textAreaText = $0})
 
         return [section1]
     }
