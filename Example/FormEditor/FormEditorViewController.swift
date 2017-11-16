@@ -18,5 +18,7 @@ class FormEditorViewController: FEViewController {
         preferences.colors.text.editing = UIColor.darkGray
         preferences.colors.text.normal = UIColor.orange
         preferences.colors.text.placeholder = UIColor.black
+        
+        preferences.labels.inputAccessory.done = "Готово"
     }
 }

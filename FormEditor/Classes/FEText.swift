@@ -4,7 +4,7 @@ public class FEText: PFEParam {
     public var id: String
     public var cellReuseId = "FEText"
     public var cellNibName = "FEText"
-    public var allowReuseCell = false
+    public var allowReuseCell = true
     
     public var accessibilityIdentifier: String?
     public var title: String?
@@ -20,11 +20,14 @@ public class FEText: PFEParam {
     public var accessoryImageNames: [String]
     
     public var valueChangeListener: ((String?) -> Void)?
+    public var configureCell: ((UITableViewCell) -> Void)?
     
-    public init(id: String, title: String? = nil, value: String? = nil, keyboardType: UIKeyboardType = .default, autocapitalizationType: UITextAutocapitalizationType = .none, inputMask: String? = nil, inputMaskForwardDecoration: Bool = true, maxLength: Int? = nil, readOnly: Bool = false, accessoryImageNames: [String] = [], visible: Bool = true, accessibilityIdentifier: String? = nil, listener: ((String?) -> Void)? = nil) {
+    public init(id: String, title: String? = nil, reuseId: String = "FEText", nibName: String = "FEText", value: String? = nil, keyboardType: UIKeyboardType = .default, autocapitalizationType: UITextAutocapitalizationType = .none, inputMask: String? = nil, inputMaskForwardDecoration: Bool = true, maxLength: Int? = nil, readOnly: Bool = false, accessoryImageNames: [String] = [], visible: Bool = true, accessibilityIdentifier: String? = nil, listener: ((String?) -> Void)? = nil, configureCell: ((UITableViewCell) -> Void)? = nil) {
         self.id = id
         self.title = title
         self.value = value
+        self.cellReuseId = reuseId
+        self.cellNibName = nibName
         self.keyboardType = keyboardType
         self.autocapitalizationType = autocapitalizationType
         self.inputMask = inputMask
@@ -35,6 +38,7 @@ public class FEText: PFEParam {
         self.accessibilityIdentifier = accessibilityIdentifier
         self.valueChangeListener = listener
         self.accessoryImageNames = accessoryImageNames
+        self.configureCell = configureCell
     }
     
     public var canReceiveFocus: Bool {
@@ -44,6 +48,7 @@ public class FEText: PFEParam {
     public func configure(cell: UITableViewCell, facade: FormParamFacade) {
         if let paramCell = cell as? FETextCell {
             paramCell.configure(facade: facade)
+            configureCell?(cell)
         }
     }
     

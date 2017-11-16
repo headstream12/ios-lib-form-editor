@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell2" id="xwc-lg-uv3" customClass="CustomDateCell" customModule="FormEditor_Example" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomDateCell" id="xwc-lg-uv3" customClass="CustomDateCell" customModule="FormEditor_Example" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xwc-lg-uv3" id="Hq8-7f-gKi">
@@ -84,6 +84,40 @@
                                 <connections>
                                     <outlet property="titleTextLabel" destination="Ybg-ac-W0a" id="thh-5I-0NL"/>
                                     <outlet property="valueTextField" destination="prV-uL-oWg" id="cba-97-h5F"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTextCell" id="6iL-jV-CBD" userLabel="CustomSelectorCell" customClass="CustomTextCell" customModule="FormEditor_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="143.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6iL-jV-CBD" id="W0h-6b-UWS">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Text Cell " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFH-Hb-z8a">
+                                            <rect key="frame" x="14" y="11" width="134" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="info" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVc-BX-4gr" customClass="FETextField" customModule="FormEditor">
+                                            <rect key="frame" x="273" y="7" width="33" height="30"/>
+                                            <color key="textColor" red="0.99821859599999996" green="0.39832174780000001" blue="0.0058755371720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jFH-Hb-z8a" firstAttribute="top" secondItem="W0h-6b-UWS" secondAttribute="top" constant="11" id="M4l-aN-KSK"/>
+                                        <constraint firstAttribute="bottom" secondItem="LVc-BX-4gr" secondAttribute="bottom" constant="6.5" id="RiW-5v-bK5"/>
+                                        <constraint firstItem="LVc-BX-4gr" firstAttribute="top" secondItem="W0h-6b-UWS" secondAttribute="top" constant="7" id="a3a-Se-GtS"/>
+                                        <constraint firstAttribute="bottom" secondItem="jFH-Hb-z8a" secondAttribute="bottom" constant="11.5" id="gE6-t8-202"/>
+                                        <constraint firstItem="jFH-Hb-z8a" firstAttribute="leading" secondItem="W0h-6b-UWS" secondAttribute="leading" constant="14" id="y8W-ob-4Xy"/>
+                                        <constraint firstAttribute="trailing" secondItem="LVc-BX-4gr" secondAttribute="trailing" constant="14" id="yAe-7x-hLk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleTextLabel" destination="jFH-Hb-z8a" id="Vbu-nt-c3K"/>
+                                    <outlet property="valueTextField" destination="LVc-BX-4gr" id="otU-q1-GFj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -1,6 +1,6 @@
 import UIKit
 
-class FETextCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDelegate {
+open class FETextCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDelegate {
     
     @IBOutlet var valueTextField: FETextField!
     
@@ -101,7 +101,7 @@ class FETextCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDelegate 
         }
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         guard let facade = self.facade else {
             return false
         }
@@ -109,7 +109,7 @@ class FETextCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDelegate 
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         if let editingTextColor = facade?.preferences.colors.text.editing {
             valueTextField.textColor = editingTextColor
         }
@@ -122,14 +122,14 @@ class FETextCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDelegate 
         param?.onValueChanged(newValue)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
         if let normalTextColor = facade?.preferences.colors.text.normal {
             valueTextField.textColor = normalTextColor
         }
         facade?.didEndEditing()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing()
         return true
     }

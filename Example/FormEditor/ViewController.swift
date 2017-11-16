@@ -27,6 +27,7 @@ class ViewController: FormEditorViewController, PFEForm {
         ("2002", "2002")
     ]
     
+    var textNumber: String?
     var textAreaText: String?
     
     let selectorValues: [(String?, String?)] = [("1","Раз"),("2","Два"),("3","Три")]
@@ -43,7 +44,7 @@ class ViewController: FormEditorViewController, PFEForm {
         date1 = Date()
         let section1 = FESection(header: "Хэдер")
         
-        section1 += FEDate(id: "Date3", reuseId: "CustomCell2", value: Date(), minDate: earlyDate!, maxDate: Date(), listener: {self.date2 = $0}, configureCell: {
+        section1 += FEDate(id: "Date3", reuseId: "CustomDateCell", value: Date(), minDate: earlyDate!, maxDate: Date(), listener: {self.date2 = $0}, configureCell: {
             let customCell2 = $0 as! CustomDateCell
             customCell2.titleTextLabel.text = "Год рождения"
         })
@@ -53,9 +54,16 @@ class ViewController: FormEditorViewController, PFEForm {
                 selectorCell.titleTextLabel.text = "Год выпуска"
             })
         
-        section1 += FETextArea(id: "TextArea", title: "Тайтл", value: "Текст", listener: {self.textAreaText = $0})
+        section1 += FEText(id: "Text", reuseId: "CustomTextCell", keyboardType: .numberPad, maxLength: 4, listener: {self.textNumber = $0}, configureCell: {
+            let textCell = $0 as! CustomTextCell
+            textCell.titleTextLabel.text = "Мощность двигателя"
+        })
+        
+        
+        let section2 = FESection(header: "Описание")
+        section2 += FETextArea(id: "TextArea", title: "Добавьте описание", listener: {self.textAreaText = $0})
 
-        return [section1]
+        return [section1, section2]
     }
     
     @IBAction func switchParamVisibility(_ sender: Any) {

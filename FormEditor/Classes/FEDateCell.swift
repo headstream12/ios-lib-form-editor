@@ -99,14 +99,14 @@ open class FEDateCell: UITableViewCell, UITextFieldDelegate, FormParamFacadeDele
         return true
     }
     
-    open func textFieldDidBeginEditing(_ textField: UITextField) {
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
         if let editingTextColor = facade?.preferences.colors.text.editing {
             textField.textColor = editingTextColor
         }
         facade?.didBeginEditing()
     }
     
-   open func textFieldDidEndEditing(_ textField: UITextField) {
+   public func textFieldDidEndEditing(_ textField: UITextField) {
         if let normalTextColor = facade?.preferences.colors.text.normal {
             textField.textColor = normalTextColor
         }
