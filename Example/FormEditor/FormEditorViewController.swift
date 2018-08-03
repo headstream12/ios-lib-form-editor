@@ -8,8 +8,8 @@
 
 import FormEditor
 
-class FormEditorViewController: FEViewController {
-    override func viewDidLoad() {
+@objc public class FormEditorViewController: FEViewController {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         preferences.colors.inputAccessory.background = view.backgroundColor!
