@@ -39,6 +39,12 @@ open class FEViewController: UITableViewController, FormEditorFacadeDelegate {
         return facade.paramsCountInVisibleSection(section)
     }
     
+    override open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = facade.explicitCellHeight(row: indexPath.row, section: indexPath.section) ??
+            super.tableView(tableView, heightForRowAt: indexPath)
+        return height
+    }
+    
     override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseId = facade.cellReuseId(row: indexPath.row, section: indexPath.section)
         
@@ -47,7 +53,8 @@ open class FEViewController: UITableViewController, FormEditorFacadeDelegate {
             return cell
         } else {
             let nibName = facade.cellNibName(row: indexPath.row, section: indexPath.section)
-            let nib = UINib(nibName: nibName, bundle: Bundle(for: FEViewController.self))
+            let bundle = facade.cellBundle(row: indexPath.row, section: indexPath.section)
+            let nib = UINib(nibName: nibName, bundle: bundle)
             tableView.register(nib, forCellReuseIdentifier: reuseId)
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: reuseId) {
@@ -82,6 +89,14 @@ open class FEViewController: UITableViewController, FormEditorFacadeDelegate {
     public func scrollTo(row: Int, section: Int) {
         let indexPath = IndexPath(row: row, section: section)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
+    func updateWithoutAnimations(code: ()->Void) {
+        UIView.performWithoutAnimation {
+            tableView.beginUpdates()
+            code()
+            tableView.endUpdates()
+        }
     }
     
     func beginUpdates() {

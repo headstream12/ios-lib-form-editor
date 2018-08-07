@@ -6,7 +6,8 @@ public class FEDate: PFEParam {
     public var cellReuseId = "FEDate"
     public var allowReuseCell = true
     public var canReceiveFocus = true
-    
+    public var cellBundle = Bundle(for: FEViewController.self)
+
     public var title: String?
     public var value: Date?
     public var displayableValueFormat: String

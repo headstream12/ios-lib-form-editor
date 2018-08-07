@@ -5,7 +5,8 @@ public class FESelector: PFEParam {
     public var cellNibName = "FESelector"
     public var cellReuseId = "FESelector"
     public var allowReuseCell = true
-    
+    public var cellBundle = Bundle(for: FEViewController.self)
+
     public var accessibilityIdentifier: String?
     public var title: String?
     public var value: String?

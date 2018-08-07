@@ -80,6 +80,10 @@ public class FormParamFacade {
     public var preferences: FEPreferences {
         return formEditorFacade?.preferences ?? FEPreferences()
     }
+    
+    public func setCellHeight(_ height: CGFloat?, animated: Bool = true) {
+        formEditorFacade?.setCellHeight(height, param: param, animated: animated)
+    }
 }
 
 

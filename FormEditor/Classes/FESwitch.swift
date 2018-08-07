@@ -5,7 +5,8 @@ public class FESwitch: PFEParam {
     public var cellNibName = "FESwitch"
     public var cellReuseId = "FESwitch"
     public var allowReuseCell = false
-    
+    public var cellBundle = Bundle(for: FEViewController.self)
+
     public var title: String? = nil
     public var value: Bool = false
     public var readOnly: Bool = false

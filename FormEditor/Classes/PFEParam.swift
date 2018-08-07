@@ -7,6 +7,8 @@ public protocol PFEParam: class {
     
     var cellReuseId: String {get}
     
+    var cellBundle: Bundle {get}
+    
     var allowReuseCell: Bool {get}
     
     var canReceiveFocus: Bool {get}

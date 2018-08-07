@@ -6,7 +6,8 @@ public class FECustom: PFEParam {
     public var cellNibName: String
     public var allowReuseCell = true
     public var notifiesAboutDisplayReadiness = false
-    
+    public var cellBundle: Bundle
+
     public var visible: Bool
     public var separatorVisible: Bool
     public var onSelect: (() -> Void)?
@@ -24,11 +25,12 @@ public class FECustom: PFEParam {
      При указании nibName не забываем указать Bundle, в котором искать xib.
      Bundle(for: MyClass.self)
      */
-    public init(id: String, reuseId: String = "", nibName: String = "", visible: Bool = true, canReceiveFocus: Bool = false, separatorVisible: Bool = true, onSelect: (() -> Void)? = nil, comparisonData: [String: AnyHashable] = [:], configureCell: ((_ cell: UITableViewCell) -> Void)? = nil) {
+    public init(id: String, reuseId: String = "", nibName: String = "", bundle: Bundle? = nil, visible: Bool = true, canReceiveFocus: Bool = false, separatorVisible: Bool = true, onSelect: (() -> Void)? = nil, comparisonData: [String: AnyHashable] = [:], configureCell: ((_ cell: UITableViewCell) -> Void)? = nil) {
         self.id = id
         self.cellReuseId = reuseId
         self.cellNibName = nibName
         self.allowReuseCell = nibName == ""
+        self.cellBundle = bundle ?? Bundle(for: FEViewController.self)
         self.visible = visible
         self.canReceiveFocus = canReceiveFocus
         self.separatorVisible = separatorVisible

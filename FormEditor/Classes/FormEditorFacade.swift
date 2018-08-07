@@ -6,6 +6,8 @@ protocol FormEditorFacadeDelegate: class {
     func reload(indexPath: IndexPath)
     func reloadData()
     
+    func updateWithoutAnimations(code: ()->Void)
+    
     func beginUpdates()
     func endUpdates()
     
@@ -24,6 +26,7 @@ class FormEditorFacade {
     
     private var visibleSections: [FESection] = []
     private var paramFacades: [String: FormParamFacade] = [:]
+    private var paramHeights: [String: CGFloat] = [:]
     
     weak var form: PFEForm? {
         didSet {
@@ -83,6 +86,14 @@ class FormEditorFacade {
         }
         
         return param.cellNibName
+    }
+    
+    func cellBundle(row: Int, section: Int) -> Bundle {
+        guard let param = visibleSections[section][row] else {
+            return Bundle(for: FEViewController.self)
+        }
+        
+        return param.cellBundle
     }
     
     func paramFacade(row: Int, section: Int) -> FormParamFacade? {
@@ -313,6 +324,32 @@ class FormEditorFacade {
             }
         }
         return deletedItems
+    }
+    
+    func explicitCellHeight(row: Int, section: Int) -> CGFloat? {
+        guard let paramId = visibleSections[section][row]?.id else {
+            return nil
+        }
+        
+        return paramHeights[paramId]
+    }
+    
+    func setCellHeight(_ height: CGFloat?, param: PFEParam, animated: Bool) {
+        DispatchQueue.main.async {
+            guard self.paramHeights[param.id] != height else {
+                return
+            }
+            
+            if !animated {
+                self.delegate?.updateWithoutAnimations {
+                    self.paramHeights[param.id] = height
+                }
+            } else {
+                self.delegate?.beginUpdates()
+                self.paramHeights[param.id] = height
+                self.delegate?.endUpdates()
+            }
+        }
     }
     
     private func movedItems(oldSections: [FESection], newSections: [FESection]) -> [(IndexPath, IndexPath)] {

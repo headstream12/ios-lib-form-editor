@@ -5,7 +5,8 @@ public class FELabel: PFEParam {
     public var cellReuseId = "FELabel"
     public var cellNibName = "FELabel"
     public var allowReuseCell = false
-    
+    public var cellBundle = Bundle(for: FEViewController.self)
+
     public var accessibilityIdentifier: String?
     public var title: String?
     public var value: String?
