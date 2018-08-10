@@ -39,7 +39,7 @@ open class FESelectorCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDel
     }
     
     private func textFieldValue(value: String?) -> String? {
-        guard let value = value else {
+        guard let clearValue = value else {
             return nil
         }
         
@@ -48,7 +48,7 @@ open class FESelectorCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDel
         }
         
         let visibleValue = param.items?
-            .first(where: {$0.value == value})?
+            .first(where: {$0.value == clearValue})?
             .visibleValue ?? ""
         
         return String(format: param.displayableValueFormat, visibleValue)
