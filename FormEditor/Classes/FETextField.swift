@@ -1,27 +1,27 @@
 import UIKit
 
 @IBDesignable public class FETextField: UITextField {
-    @IBInspectable var onValueChanged: ((String?) -> Void)? {
+    @IBInspectable public var onValueChanged: ((String?) -> Void)? {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var textFieldDelegate: UITextFieldDelegate? {
+    @IBInspectable public var textFieldDelegate: UITextFieldDelegate? {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var inputMask: String? = nil {
+    @IBInspectable public var inputMask: String? = nil {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var inputMaskForwardDecoration: Bool = true {
+    @IBInspectable public var inputMaskForwardDecoration: Bool = true {
         didSet {
             setUp()
         }
     }
-    @IBInspectable var maxLength: Int? = nil {
+    @IBInspectable public var maxLength: Int? = nil {
         didSet {
             setUp()
         }
