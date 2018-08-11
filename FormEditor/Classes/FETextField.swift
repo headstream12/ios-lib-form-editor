@@ -67,7 +67,7 @@ import UIKit
         }
     }
     
-    var textWithoutMask: String? {
+    public var textWithoutMask: String? {
         return delegateWrapper?.getRawValue(fromMaskedValue: self.text) ?? self.text
     }
 }
