@@ -1,6 +1,6 @@
 import UIKit
 
-@IBDesignable class FETextField: UITextField {
+@IBDesignable public class FETextField: UITextField {
     @IBInspectable var onValueChanged: ((String?) -> Void)? {
         didSet {
             setUp()
@@ -27,7 +27,7 @@ import UIKit
         }
     }
     
-    override var text: String? {
+    override public var text: String? {
         didSet {
             setUp()
         }
@@ -40,12 +40,12 @@ import UIKit
         setUp()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUp()
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         setUp()
     }
